@@ -10,12 +10,14 @@ public class View {
 	GameStart gameStart = new GameStart();
 	Controller controller = new Controller();
 	
+	
+	
+//	게임 시작전 출력되는 메소드
 	public void main() {
 		System.out.println("■■■■■■ Tic ■■■■■■■■■■■■■■■■");
 		System.out.println("■■■■■■■■■ Tac ■■■■■■■■■■■■■");
 		System.out.println("■■■■■■■■■■■■ Toe ■■■■■■■■■■");
 		System.out.println("■■■■■■■■■■■■■■■ Game ■■■■■■\n");
-		
 		
 		while(true) {
 			System.out.println("■ 1. 캐릭터생성");
@@ -39,7 +41,7 @@ public class View {
 					System.out.println("■ 임 ■■■■■■■ Tac ■■■■■■■■■■■■■");
 					System.out.println("■ 종 ■■■■■■■■■■ Toe ■■■■■■■■■■");
 					System.out.println("■ 료 ■■■■■■■■■■■■■ EXIT ■■■■■■");
-					return;
+					System.exit(0);
 				default : 
 					System.out.println("■ 잘못된 메뉴를 입력했습니다 다시 입력해 주세요.");
 			}
@@ -48,6 +50,7 @@ public class View {
 	
 	
 	
+//	유저의 계정을 생성한뒤 start메소드로 넘어감
 	public void create() {
 		
 		System.out.print("\n■ 닉네임을 입력하세요 : ");
@@ -58,17 +61,18 @@ public class View {
 		System.out.println(userName + "님 환영합니다.");
 		
 		start();
-		
-
 	}
 	
 	
 	
+//	게임 시작전 정보, 수정, 삭제등의 메뉴선택 창
 	public void start() {
 		
 		while(true) {
 			System.out.println("■ 1. 게임시작");
 			System.out.println("■ 2. 내 정보");
+			System.out.println("■ 3. 닉네임 수정");
+			System.out.println("■ 4. 계정삭제");
 			System.out.println("■ 0. 게임종료");
 			System.out.print("■ 메뉴선택 => ");
 			int menu = sc.nextInt();
@@ -76,9 +80,32 @@ public class View {
 			
 			switch(menu) {
 			case 1 :
+				System.out.println("\n\n■ 게임을 시작합니다.\n\n");
+				gameStart.game();
+				return;
 			case 2 :
 				System.out.println("\n\n■ " + controller.userInfo().get(0).getUserName() + "님의 정보");
 				System.out.println(controller.userInfo().get(0).toString() + "\n\n");
+				break;
+			case 3: 
+				System.out.print("\n\n■ 수정할 닉네임을 입력하세요 : ");
+				String reName = sc.nextLine();
+				controller.reName(reName);
+				System.out.println("■ 수정이 완료 되었습니다.\n\n");
+				break;
+			case 4: 
+				System.out.println("\n\n■ 정말로 삭제 하시겠습니까?(y)");
+				System.out.print("■ 삭제를 원하지 않는다면 아무키나 눌러주세요 : ");
+				char answer = sc.nextLine().charAt(0);
+				
+				int result = controller.remove(answer);
+				
+				if(result > 0) {
+					System.out.println("\n\n■ 성공적으로 삭제 되었습니다. 초기화면 으로 돌아갑니다.\n\n");
+					main();
+				}else{
+					System.out.println("\n\n■ 이전 화면으로 돌아갑니다.\n\n");
+				}
 				break;
 			case 0 :
 				System.out.println("\n\n■ 게 ■■■■ Tic ■■■■■■■■■■■■■■■■");
@@ -91,24 +118,4 @@ public class View {
 			}
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
