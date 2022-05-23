@@ -81,8 +81,8 @@ public class View {
 			switch(menu) {
 			case 1 :
 				System.out.println("\n\n■ 게임을 시작합니다.\n\n");
-				gameStart.game();
-				return;
+				step();
+				break;
 			case 2 :
 				System.out.println("\n\n■ " + controller.userInfo().get(0).getUserName() + "님의 정보");
 				System.out.println(controller.userInfo().get(0).toString() + "\n\n");
@@ -117,5 +117,30 @@ public class View {
 				System.out.println("■ 잘못된 메뉴를 입력했습니다 다시 입력해 주세요.");
 			}
 		}
+	}
+	
+	
+	
+	
+//	난이도
+	public void step() {
+		
+		System.out.println("■ 난이도를 선택해 주세요");
+		System.out.println("1. 초급");
+//		System.out.println("2. 중급");
+//		System.out.println("3. 고급");
+		System.out.print("■ 메뉴선택 => ");
+		int menu = sc.nextInt();
+		
+		switch(menu) {
+		case 1 : 
+			System.out.println("\n\n■ 게임을 시작합니다.");
+			gameStart.game(); break;
+//		case 2 : 
+//		case 3 : 
+		default : System.out.println("\n\n메뉴를 잘못 입력하셨습니다.");
+		return;
+		}
+		
 	}
 }

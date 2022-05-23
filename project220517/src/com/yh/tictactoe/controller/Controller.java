@@ -64,17 +64,35 @@ public class Controller {
 	
 	
 //	game controll==========================================================
+
+	ArrayList<Board> board = new ArrayList<>();
+	{
+		board.add(new Board("бр", "бр", "бр", "бр", "бр", "бр", "бр", "бр", "бр"));
+	}
 	
-	public char[] board() {
-		char[] board = {'бр', 'бр', 'бр', 'бр' ,'бр' ,'бр' ,'бр', 'бр', 'бр'};
+	public ArrayList<Board> boardView() {
 		return board;
 	}
 	
 	
 	
-	public void userTurn() {
+	public void userTurn(int select) {
 		
-	} 
+		switch(select) {
+		case 0 : board.get(0).setF1("б▄"); break;
+		case 1 : board.get(0).setF2("б▄"); break;
+		case 2 : board.get(0).setF3("б▄"); break;
+		case 3 : board.get(0).setF4("б▄"); break;
+		case 4 : board.get(0).setF5("б▄"); break;
+		case 5 : board.get(0).setF6("б▄"); break;
+		case 6 : board.get(0).setF7("б▄"); break;
+		case 7 : board.get(0).setF8("б▄"); break;
+		case 8 : board.get(0).setF9("б▄"); break;
+		}
+	}
+	
+	
+			
 	
 	
 	
