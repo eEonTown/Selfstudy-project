@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기</title>
+    <link rel="stylesheet" href="/project220621_calculator/css/style.css">
+    <script src="/project220621_calculator/js/calculator.js"></script>
+    <script src="/project220621_calculator/js/mode.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="calculator">
+            <div id="result-area">
+                <div>여기는 결과가 나옵니다.</div>
+            </div>
+            <div id="write-area">
+                <input type="number" id="number1" placeholder="첫번째 숫자 입력"><input type="number" id="number2" placeholder="두번째 숫자 입력">
+            </div>
+            <div id="operator-area">
+                <button onclick="operator(this.innerHTML);">+</button><button onclick="operator(this.innerHTML);">-</button><button onclick="operator(this.innerHTML);">x</button><button onclick="operator(this.innerHTML);">/</button><button onclick="operator(this.innerHTML);">%</button>
+            </div>
+            <div id="button-area">
+                <button id="mode" onclick="changeMode();">라이트모드</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
