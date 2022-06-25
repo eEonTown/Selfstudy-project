@@ -1,0 +1,210 @@
+div,
+input,
+p{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    margin : 0;
+    padding : 0;
+}
+
+#wrap{
+    background : repeating-linear-gradient(
+        rgba(0, 0, 0, 0.8), rgba(24, 24, 24, 0.282), rgba(0, 0, 0, 0.8)
+    ),
+    url("https://assets.nflxext.com/ffe/siteui/vlv3/c732cb00-be61-4d64-b8c3-99f022e7a123/309fb4b9-f262-4cbd-9343-5023bc74d2d7/KR-ko-20220620-popsignuptwoweeks-perspective_alpha_website_small.jpg");
+    background-size : cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width : 100%;
+}
+
+/*header관련*/
+#header{
+    width : 100%;
+    height : 100px;
+    padding : 20px 0 20px 30px;
+}
+
+#header>a{
+    font-size : 40px;
+    font-weight : 900;
+    color : #e50914;
+
+}
+
+/*content관련*/
+#content{
+    background-color: rgba(0, 0, 0, 0.8);
+    width : 450px;
+    height : 600px;
+    margin : auto;
+    padding : 30px 60px 0 60px;
+}
+
+#content>h1{
+    color : white;
+}
+
+#login,
+#pwd{
+    width : 100%;
+    height : 50px;
+    margin-bottom : 15px;
+    padding : 10px;
+    background-color : #333333;
+    border-radius: 5px;
+    border-style : none;
+    color : white;
+}
+
+#login:focus,
+#pwd:focus{
+    background-color: #454545;
+    outline: none;
+}
+
+#login-btn{
+    width : 100%;
+    height : 50px;
+    background-color: #e50914;
+    color : white;
+    font-size : 15px;
+    font-weight : 600;
+    margin-top : 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#login-remember-link{
+    width : 100%;
+    height : 30px;
+    color : #b3b3b3;
+    font-size : 13px;
+    position : relative;
+    margin-top : 10px;
+}
+
+#login-remember{
+    width : 40%;
+    display : inline-block;
+    position : absolute;
+    top : 0;
+    left : 0;
+}
+
+#login-link{
+    width : 40%;
+    display : inline-block;
+    position : absolute;
+    top : 0;
+    right : 0;
+}
+
+#login-link>a{
+    color : #b3b3b3;
+}
+
+#login-link>a:hover{
+    text-decoration: underline;
+}
+
+#register{
+    width : 100%;
+    height : 40px;
+    color : #737373;
+    margin-top : 50px;
+}
+
+#register>a{
+    color : white;
+    font-weight : 500;
+}
+
+#register>a:hover{
+    text-decoration: underline;
+}
+
+#register>p{
+    font-size : 13px;
+}
+
+#register>p>span>a{
+    color : #0261eb;
+}
+
+#register>p>span>a:hover{
+    text-decoration: underline;
+}
+
+/*footer관련*/
+#footer-wrap{
+    width : 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-top : 70px;
+    color : #737373;
+    padding : 30px;
+}
+
+#footer{
+    width : 70%;
+    margin : auto;
+}
+
+#footer>#call>a{
+    color : #737373;
+}
+
+#footer>#call>a:hover{
+    text-decoration: underline;
+}
+
+#table-area{
+    width : 100%;
+    height : 70px;
+    font-size : 13px;
+    margin : 15px 0 15px 0;
+}
+
+#table-area>table{
+    width : 100%;
+    height : 100%;
+}
+
+#table-area table tr td{
+    width : 25%;
+}
+
+#table-area table tr td a{
+    color : #737373;
+}
+
+#table-area table tr td a:hover{
+    text-decoration : underline;
+}
+
+select{
+    width : 100px;
+    height : 35px;
+    background-color: black;
+    color : white;
+    margin-bottom : 10px;
+}
+
+#footer>p{
+    font-size : 11px;
+    line-height: 15px;;
+}
+
+#footer>p>a{
+    color : #737373;
+}
+
+#footer>p>a:hover{
+    text-decoration: underline;
+}
