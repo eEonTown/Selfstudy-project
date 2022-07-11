@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="userLogin">
+		SELECT USER_NO
+		     , USER_ID
+		     , USER_PWD
+		     , USER_NAME
+		     , GENDER
+		     , EMAIL
+		     , PHONE
+		  FROM PROFILE
+		 WHERE USER_ID = ?
+		   AND USER_PWD = ?
+	</entry>
+	
+	<entry key="userJoin">
+		INSERT
+		  INTO PROFILE
+		       (USER_NO
+		      , USER_ID
+		      , USER_PWD
+		      , USER_NAME
+		      , GENDER
+		      , EMAIL
+		      , PHONE)
+		 VALUES (SEQ_USER.NEXTVAL
+		      , ?
+		      , ?
+		      , ?
+		      , ?
+		      , ?
+		      , ?)
+	</entry>
+</properties>
